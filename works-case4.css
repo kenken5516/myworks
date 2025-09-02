@@ -1,0 +1,298 @@
+@charset "utf-8";
+
+h1 {
+    display: block;
+    font-size: 7.2rem;
+    margin-top: 80px;
+    margin-left: 10vw;
+}
+
+.sub-title {
+    display: inline-block;
+    font-size: 2.2rem;
+    margin-left: 12vw;
+}
+
+.logo {
+    display: none;
+}
+
+/* gnav（ハンバーガーメニュー）開いている時のみ、ロゴを表示 */
+.logo.open {
+    display: block;
+}
+
+/* common.cssと連動。res-logoをcommon.cssで表示する */
+@media screen and (max-width: 1200px) {
+    .logo.open {
+        display: none;
+    }
+}
+
+.selectbox {
+    margin-right: 17vw;
+}
+
+.field {
+    position: relative;
+}
+
+.titleing-pole {
+    position: absolute;
+    top: 52px;
+    left: -5px;
+}
+
+.titleing-pole img {
+    width: 100%;
+    height: 40px;
+}
+
+.change-img {
+    display: none;
+}
+
+.works-name {
+    display: inline-block;
+    font-size: 3.8rem;
+    padding-top: 50px;
+    padding-right: 7px;
+    margin-left: 10px;
+}
+
+.type {
+    font-size: 1.6rem;
+    margin-left: 7px;
+    border: solid 1px rgb(134, 134, 134);
+    border-radius: 8px;
+    padding: 0 0.5em;
+}
+
+.works-content {
+    margin-top: 135px;
+    padding-right: 55px;
+    align-items: flex-end;
+
+
+    img {
+        max-width: 600px;
+        width: 100%;
+    }
+}
+
+.works-detail {
+    font-size: 1.4rem;
+    line-height: 2rem;
+
+    p {
+        padding-bottom: 10px;
+    }
+
+    span {
+        line-height: 2;
+    }
+}
+
+
+@media screen and (max-width: 1110px) {
+
+    .field {
+        max-width: 660px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .works-name {
+        margin-left: 0;
+        padding: 30px 0 10px 15px;
+    }
+
+    .type {
+        font-size: 1.4rem;
+        margin-left: 13px;
+    }
+
+    .titleing-pole {
+        top: 32px;
+        left: 0px;
+    }
+
+    .works-detail {
+        order: 2;
+        margin-right: 250px;
+    }
+
+    .works-detail-name {
+        padding-top: 25px;
+    }
+
+    .works-content img {
+        order: 1;
+    }
+
+    .works-content {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px;
+    }
+
+}
+
+@media screen and (max-width: 900px) {
+    .works-name {
+        margin-left: 5vw;
+        padding: 20px 0 10px;
+    }
+
+    .titleing-pole {
+        top: 23px;
+        left: 28px;
+    }
+
+    .works-content {
+        padding-right: 0;
+    }
+}
+
+@media screen and (max-width: 732px) {
+    .works-name {
+        display: block;
+        margin-left: 15px;
+    }
+
+    .type {
+        margin-left: 13px;
+        padding: 0 10px 0;
+    }
+
+    .titleing-pole {
+        top: 25px;
+        left: 0;
+    }
+
+    .works-content img {
+        margin-top: 10px;
+    }
+
+    .reset {
+        display: none;
+    }
+
+    .works-detail {
+        margin-right: 0;
+        text-align: justify;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .works-name {
+        display: inline-block;
+        font-size: 2.2rem;
+    }
+
+    .type {
+        font-size: 1rem;
+        padding: 0 0.3em;
+        margin-left: 3px;
+        border-radius: 5px;
+    }
+
+    .titleing-pole {
+        top: 21px;
+        left: 0;
+    }
+
+    .titleing-pole img {
+        height: 25px;
+    }
+
+    .base-img {
+        display: none;
+    }
+
+    .change-img {
+        display: block;
+    }
+
+    .works-content {
+        margin-top: 0;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .works-name {
+        display: block;
+    }
+
+    .type {
+        margin-left: 15px;
+    }
+}
+
+.related-works {
+    display: block;
+    font-weight: 500;
+    border-bottom: solid 2px #161616;
+    font-size: 1.8rem;
+    padding-top: 80px;
+    margin-right: 55px;
+}
+
+.related-area {
+    padding-right: 75px;
+    padding-left: 20px;
+    padding-bottom: 70px;
+    gap: 30px;
+
+    img {
+        max-width: 200px;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1110px) {
+    .related-works {
+        padding-top: 50px;
+        margin-right: auto;
+        margin-left: auto;
+        max-width: 700px;
+    }
+
+    .related-area {
+        max-width: 700px;
+        padding-right: 20px;
+        padding-left: 20px;
+
+        img {
+            max-width: 150px;
+        }
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .town-f {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .nature-chiba {
+        display: none;
+    }
+
+    .related-area {
+        img {
+            max-width: 200px;
+        }
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .related-area {
+        flex-direction: column;
+
+        img {
+            max-width: 280px;
+        }
+    }
+}

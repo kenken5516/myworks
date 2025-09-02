@@ -1,0 +1,690 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap');
+
+html {
+    font-size: 10px;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+/* フレックスボックス */
+.model-flex {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+
+
+    &.type-little-right {
+        justify-content: center;
+        align-items: flex-end;
+        margin-left: 100px;
+        margin-bottom: 200px;
+        gap: 30px;
+    }
+
+    &.type-little-left {
+        justify-content: center;
+        margin-bottom: 200px;
+        gap: 80px;
+    }
+
+    &.type-around {
+        justify-content: space-around;
+        align-items: normal;
+        margin-bottom: 200px;
+    }
+
+    &.type-little-around {
+        justify-content: center;
+        max-width: 1000px;
+        margin-right: auto;
+        margin-left: auto;
+        padding: 70px 150px 125px 0;
+        gap: 60px;
+    }
+
+    &.type-strech {
+        align-items: stretch;
+    }
+}
+
+/* モデルインナー 通常 */
+.model-inner {
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 60px 30px;
+
+    &.type-right {
+        padding-bottom: 90px;
+        gap: 50px;
+    }
+
+    &.type-works-right {
+        padding-left: 30px;
+        padding-right: 60px;
+        gap: 50px;
+    }
+
+    &.type-works-left {
+        padding-left: 60px;
+        padding-right: 30px;
+        gap: 50px;
+    }
+
+    &.type-center {
+        max-width: 900px;
+    }
+
+    &.type-center-right {
+        max-width: 900px;
+        padding: 100px 100px 200px 0;
+        align-items: flex-end;
+    }
+}
+
+/* モデルインナー　高さ小さめ */
+.model-inner-s {
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 30px 30px;
+}
+
+/* モデルボタン */
+.model-btn {
+    display: inline-block;
+    text-align: center;
+    font-weight: 400;
+    letter-spacing: 1.2px;
+    cursor: pointer;
+    width: 150px;
+    line-height: 40px;
+    position: relative;
+    top: 0;
+    left: 0;
+
+    &.type-border {
+        font-size: 1.2rem;
+        border: 3px solid #999;
+    }
+
+    &.type-border:hover {
+        border-color: #d6ff43;
+    }
+
+    &.color-change-btn {
+        background-color: #ffffff;
+    }
+
+    &.color-change-btn:hover {
+        background-color: #e4d20e;
+        color: #fff;
+    }
+}
+
+
+/* btnだがデザインのみ、クリックリンクなし */
+.type-btn-en {
+    border: solid 1px rgb(134, 134, 134);
+    border-radius: 3px;
+    padding-left: 5px;
+    padding-right: 5px;
+    vertical-align: middle;
+}
+
+/* btnだがデザインのみ、クリックリンクなし */
+.type-btn-ja {
+    border: solid 1px rgb(134, 134, 134);
+    border-radius: 4px;
+    margin-left: 10px;
+    padding: 0 0.5em;
+    vertical-align: middle;
+}
+
+/* waypoints.jsのスクロールアクション */
+.scroll-action {
+    transition: .5s;
+}
+
+/* コンタクトページへのアクセスボタンと付随エリア */
+.contact-area {
+    width: 700px;
+    height: 120px;
+    margin-top: 80px;
+    margin-bottom: 140px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.contact-btn {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    border: 2px solid black;
+
+    /* ↓フロートボタン機能のためのサイズ調整 */
+    position: relative;
+    top: 0;
+    left: 0;
+    box-shadow: 0px 0px rgb(239, 250, 76);
+}
+
+.contact-btn:hover {
+    top: -5px;
+    left: -5px;
+    box-shadow: 12px 12px rgba(239, 250, 76, 1);
+    transition-duration: 0.4s;
+}
+
+.contact-bar {
+    width: 80%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.8rem;
+}
+
+.pager-next-space {
+    display: flex;
+    width: 20%;
+    justify-content: center;
+    border-left: 2px solid black;
+}
+
+.pager-next {
+    width: 60px;
+    height: auto;
+    align-items: center;
+    background-image: url(../img/common/yajirushi.png);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 800px) {
+
+    .contact-area {
+        width: 500px;
+        height: 90px;
+
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+
+    .contact-area {
+        width: 300px;
+        height: 60px;
+
+    }
+
+    .contact-bar {
+        font-size: 1.8rem;
+    }
+
+
+    .pager-next {
+        width: 30px;
+        background-size: contain;
+    }
+}
+
+/* ハンバーガーアイコン */
+/* 非表示だったハンバーガーアイコンを表示させる */
+/* ブロック要素にしたいわけではない※今回はmedia screen対応なし。常時表示*/
+
+.hmbicon {
+    display: block;
+    width: 50px;
+    padding: 6px;
+    cursor: pointer;
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    z-index: 1;
+
+    img {
+        width: 100%;
+        height: auto;
+        min-width: 38px;
+    }
+}
+
+.gnav {
+    display: none;
+
+    /* ホバー時のエフェクト */
+    .g-menu {
+        position: relative;
+        transition: .3s;
+    }
+
+    .g-menu:hover {
+        color: #f7e300;
+    }
+
+    .g-menu::after {
+        position: absolute;
+        bottom: 0.3em;
+        left: 0;
+        content: '';
+        width: 100%;
+        height: 2px;
+        opacity: 0;
+        transition: .3s;
+    }
+
+    .g-menu:hover::after {
+        bottom: 0;
+        background-color: #c8cd3a;
+        opacity: 1;
+    }
+}
+
+.gnav.open {
+    display: unset;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    opacity: 1;
+    width: 100%;
+    height: 100vh;
+    background-image: url(../img/common/gnav-img/ganv-backimg5.jpg);
+    object-fit: cover;
+    background-repeat: no-repeat;
+    padding: 150px 30px 0 110px;
+    font-size: 1.6rem;
+    overflow: auto;
+    color: #e2e2e2;
+
+    ul {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+    }
+
+    li {
+        font-size: 2.6rem;
+        font-weight: 600;
+        text-align: left;
+    }
+
+    li:last-child {
+        border: 0;
+    }
+
+    .g-menu {
+        display: block;
+        padding: 20px 0 15px;
+    }
+
+    /* 
+    .model-btn {
+        padding: 0.5rem 2rem;
+        margin: 20px auto;
+    } */
+}
+
+.gnav-cont {
+    max-width: 280px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+}
+
+.logo {
+    display: block;
+    width: 200px;
+    cursor: pointer;
+    position: fixed;
+    top: 15px;
+    left: 25px;
+    z-index: 1;
+    transition: width 0.3s ease;
+
+    img {
+        width: 100%;
+        height: auto;
+        min-width: 38px;
+    }
+}
+
+.logo.small {
+    width: 120px;
+}
+
+.res-logo {
+    display: none;
+    width: 120px;
+    cursor: pointer;
+    position: fixed;
+    top: 15px;
+    left: 25px;
+    z-index: 1;
+    transition: width 0.3s ease;
+
+    img {
+        width: 100%;
+        height: auto;
+        min-width: 38px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .gnav.open {
+        background-image: none;
+        background-color: rgb(43, 35, 35);
+
+
+    }
+
+    /*ハンバーガーメニューページのロゴを白Verに差し替え */
+    .res-logo {
+        display: block;
+    }
+
+    /*ハンバーガーメニューページから通常ロゴを削除 */
+    .logo.open {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 700px) {
+
+    /* TOP・SUBページのロゴを削除 */
+    .logo {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    /*ハンバーガーメニューページの白ロゴを削除 */
+    .gnav.open {
+        .res-logo {
+            width: 100px;
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+
+    /*ハンバーガーメニューページの白ロゴを削除 */
+    .gnav.open {
+        .res-logo {
+            width: 80px;
+            top: 15px;
+            left: 15px;
+        }
+    }
+
+    .gnav-cont {
+        margin-top: 0;
+    }
+}
+
+/* テーブル */
+.model-table {
+    border-collapse: collapse;
+    border-spacing: 0;
+
+    th,
+    td {
+        font-weight: 500;
+        border: 1px solid #999;
+        padding: 0.5em 1em;
+        text-align: center;
+    }
+
+    th {
+        white-space: nowrap;
+    }
+
+    &.type-th-gray th {
+        background-color: #f4f4f4;
+    }
+}
+
+
+/* セレクトボックス */
+.select-area {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    border: 2px solid #161616;
+    border-radius: 2px;
+}
+
+/*プルダウンの三角を設定*/
+.select-area::before {
+    position: absolute;
+    right: 15px;
+    content: '';
+    width: 16px;
+    height: 8px;
+    background: #161616;
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+}
+
+.select-area select {
+    width: 100%;
+    padding: 10px 45px 10px 10px;
+    color: #666666;
+    color: #161616;
+    cursor: pointer;
+    text-overflow: ellipsis;
+    /*テキストがオーバーしたら'...'で省略*/
+    border: none;
+    appearance: none;
+    outline: none;
+    background: transparent;
+}
+
+
+/*　フォーム */
+.model-form {
+    font-size: 1.6rem;
+    text-align: left;
+
+    dl>div {
+        margin: 25px 0;
+    }
+
+    dd {
+        font-weight: normal;
+    }
+
+    input,
+    select,
+    textarea {
+        padding: 0.5rem;
+        color: #000;
+    }
+
+    input[type="text"] {
+        width: 100%;
+    }
+
+    input[type="email"] {
+        width: 100%;
+    }
+
+    input[type="tel"] {
+        width: 100%;
+    }
+
+    input[type="radio"] {
+        appearance: auto;
+        /* ラジオボタンの〇が表示されない対策 */
+        margin-left: 1.5em;
+        margin-right: 0.2em;
+    }
+
+    input[type="radio"]:first-child {
+        margin-left: 0;
+    }
+
+    select {
+        appearance: auto;
+        width: 50%;
+        min-width: max-content;
+    }
+
+    textarea {
+        width: 100%;
+        height: 140px;
+    }
+
+    .req {
+        margin-left: 1em;
+        border: 1px solid #a22000;
+        padding: 0 0.5rem;
+        font-size: 1rem;
+        color: #a22000;
+        font-style: normal;
+        font-weight: normal;
+    }
+
+    .personal-check {
+        text-align: center;
+        margin: 3.5em 0 0;
+    }
+
+    .personal-check input[type="checkbox"] {
+        width: auto;
+        margin-right: 0.5em;
+        vertical-align: -1px;
+        appearance: auto;
+    }
+
+    input[type="checkbox"] {
+        accent-color: #f2de00;
+    }
+
+    input[type="submit"] {
+        display: block;
+        padding: 0.5em 3em;
+        margin: 1.5em auto;
+        font-weight: bold;
+        letter-spacing: 0.05em;
+    }
+
+
+
+    input,
+    select,
+    textarea {
+        background-color: #feffeb;
+        border: 1px solid #dce18f;
+    }
+
+    input[type="submit"] {
+        background-color: #f2de00;
+        border: 2px solid #f9ffa4;
+        color: #ffffff;
+        width: 30%;
+        height: 60px;
+        font-size: 1.8rem;
+        align-items: baseline;
+        border-radius: 60px;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .model-form {
+
+        input[type="submit"] {
+            width: 50%;
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .model-form {
+
+        input[type="submit"] {
+            width: 70%;
+        }
+    }
+}
+
+
+.footer-nav {
+    text-align: center;
+    /* background-color: #a5a5a5; */
+    background-image: url(../img/common/footer/footer2.jpg);
+    background-size: cover;
+    color: #fff;
+
+    .footer-logo {
+        margin-top: 70px;
+        margin-bottom: 20px;
+    }
+
+    ul {
+        margin-top: 50px;
+        margin-bottom: 50px;
+        gap: 30px;
+    }
+
+    p {
+        padding-bottom: 80px;
+    }
+}
+
+.tel,
+.fax {
+    font-weight: 400;
+    font-size: 1.6rem;
+
+    &.btn-border {
+        border: 2px solid #e8e8e8;
+        text-align: center;
+        padding: 0.6em 3.0em;
+        cursor: pointer;
+    }
+}
+
+.fax {
+    margin-left: 40px;
+}
+
+
+
+.center {
+    justify-content: center;
+}
+
+.residence {
+    display: block;
+    margin-bottom: 60px;
+}
+
+@media screen and (max-width: 650px) {
+
+    .contact-info {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .tel,
+    .fax {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .residence {
+        margin-bottom: 40px;
+    }
+}

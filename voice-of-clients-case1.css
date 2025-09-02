@@ -1,0 +1,335 @@
+@charset "utf-8";
+
+h1 {
+    display: inline-block;
+    text-align: center;
+    font-size: 7.2rem;
+    margin-top: 80px;
+    margin-left: 23vw;
+
+}
+
+.sub-title {
+    display: block;
+    font-size: 2.2rem;
+    margin-top: 5px;
+    margin-left: 25vw;
+}
+
+@media screen and (max-width: 1000px) {
+    h1 {
+        margin-left: 10vw;
+    }
+
+    .sub-title {
+        margin-left: 12vw;
+    }
+}
+
+@media screen and (max-width: 615px) {
+
+    h1 {
+        font-size: 5.2rem;
+    }
+
+    .sub-title {
+        font-size: 1.8rem;
+        padding-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    h1 {
+        font-size: 4.8rem;
+        margin-left: 7vw;
+    }
+
+    .sub-title {
+        margin-left: 7vw;
+        font-size: 1.6rem;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    h1 {
+        font-size: 4.2rem;
+        margin-left: 7vw;
+    }
+}
+
+
+.selecter {
+    margin-right: 17vw;
+}
+
+
+@media screen and (max-width: 1000px) {
+    .logo {
+        display: none;
+    }
+}
+
+
+.client-cont {
+    padding: 120px 50px 0;
+
+    img {
+        max-width: 250px;
+        width: 100%;
+    }
+}
+
+.type-center {
+    justify-content: center;
+
+    &.ajust-gap {
+        gap: 50px;
+    }
+}
+
+.client-status {
+    margin-top: 15px;
+    font-size: 1.8rem;
+
+    th {
+        padding-right: 25px;
+        border-bottom: solid 1px #DFE1A3;
+        padding-bottom: 10px;
+        padding-top: 30px;
+
+    }
+
+    td {
+        padding-right: 30px;
+        border-bottom: solid 1px black;
+        padding-bottom: 10px;
+        padding-top: 30px;
+    }
+}
+
+.date {
+    font-size: 1.3rem;
+    margin-left: 20px;
+}
+
+.type {
+    font-size: 1.2rem;
+    border: solid 1px rgb(134, 134, 134);
+    border-radius: 4px;
+    padding: 0.05em 0.8em;
+    margin-left: 15px;
+}
+
+.voice-title {
+    font-size: 1.8rem;
+    padding-top: 13px;
+    margin-left: 20px;
+}
+
+.titleing-pole {
+    position: absolute;
+    /* voice-detailがrelativeで対になっている。 */
+
+    top: 50pxpx;
+    left: 0px;
+}
+
+.titleing-pole img {
+    width: 100%;
+    height: 55px;
+}
+
+.pickup {
+    font-size: 2.6rem;
+    padding-top: 55px;
+    padding-bottom: 60px;
+}
+
+.voice-detail {
+    position: relative;
+}
+
+.voice-detail p {
+    font-size: 1.4rem;
+    padding-top: 30px;
+    letter-spacing: 0.05rem;
+    max-width: 31em;
+    text-align: justify;
+}
+
+@media screen and (max-width: 900px) {
+
+    .responsive-class {
+        display: flex;
+        gap: 50px;
+
+    }
+
+    .client-cont {
+        display: block;
+
+        &.model-inner {
+            max-width: 600px;
+        }
+    }
+
+    .date,.voice-title{
+        margin-left: 10px;
+    }
+
+    .voice-detail {
+        margin-top: 50px;
+        max-width: 450px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 8px;
+    }
+
+    .pickup {
+        padding-top: 20px;
+        padding-bottom: 30px;
+    }
+}
+
+@media screen and (max-width: 615px) {
+
+    .responsive-class {
+        display: block;
+    }
+
+    .client-cont {
+        padding:50px 0 0;
+
+        &.model-inner {
+            max-width: 400px;
+        }
+
+        img {
+            max-width: 400px;
+        }
+    }
+
+    .client-status {
+        max-width: 400px;
+
+        td {
+            padding-right: 180px;
+        }
+    }
+
+    table {
+        display: block;
+    }
+
+    .voice-title {
+        padding-top: 10px;
+    }
+
+    .pickup{
+        padding-bottom: 15px;
+    }
+
+    .voice-detail {
+        text-align: left;
+        margin-top: 100px;
+
+        .type {
+            padding: 0 0.4rem;
+        }
+
+        span {
+            font-size: 1.6rem;
+        }
+
+        br {
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 450px) {
+
+    .client-status,
+    .voice-detail {
+        max-width: 330px;
+        margin-left: auto;
+        margin-right: auto;
+
+        td {
+            padding-right: 120px;
+        }
+    }
+}
+
+
+.related-works {
+    max-width: 800px;
+    display: block;
+    font-weight: 500;
+    border-bottom: solid 2px #161616;
+    font-size: 1.8rem;
+    padding-top: 120px;
+    padding-bottom: 0;
+    padding-left: 0;
+}
+
+.related-area {
+    max-width: 900px;
+    gap: 30px;
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-bottom: 100px;
+
+    img {
+        max-width: 140px;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .related-works {
+        max-width: 500px;
+        padding-top: 80px;
+    }
+
+    .related-area {
+        max-width: 500px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .hw-president {
+        display: none;
+    }
+}
+
+
+@media screen and (max-width: 615px) {
+ 
+
+    .related-works {
+        max-width: 400px;
+    }
+
+    .related-area {
+        max-width: 400px;
+    }
+
+    .tf-president {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .related-works {
+        width: 85%;
+    }
+
+    .related-area {
+        flex-direction: column;
+
+        img{
+            max-width: 280px;
+        }
+    }
+}

@@ -1,0 +1,211 @@
+@charset "utf-8";
+
+h1 {
+    display: block;
+    /* text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 25px; */
+    font-size: 7.2rem;
+    margin-top: 80px;
+    margin-left: 16vw;
+
+}
+
+h2 {
+    display: inline-block;
+    font-size: 2.2rem;
+    margin-bottom: 100px;
+    margin-left: 18vw;
+}
+
+@media screen and (max-width: 1500px) {
+    h1 {
+        margin-left: 10vw;
+    }
+
+    h2 {
+        margin-left: 12vw;
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+    h1 {
+        font-size: 5.6rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+}
+
+.logo {
+    display: none;
+}
+
+/* gnav（ハンバーガーメニュー）開いている時のみ、ロゴを表示 */
+.logo.open {
+    display: block;
+}
+
+/* common.cssと連動。res-logoをcommon.cssで表示する */
+@media screen and (max-width: 1200px) {
+    .logo.open {
+        display: none;
+    }
+}
+
+.works-content {
+    img {
+        display: block;
+        padding-bottom: 10px;
+    }
+
+    a {
+        font-size: 1.5rem;
+    }
+
+    .type-btn-en {
+        font-size: 0.9rem;
+    }
+}
+
+.works-content-next {
+    img {
+        display: block;
+        padding-bottom: 10px;
+    }
+
+    a {
+        font-size: 1.5rem;
+    }
+
+    .type-btn-en {
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .responsive-works-left {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .responsive-works-right {
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .works-content {
+        img {
+            width: 400px;
+        }
+    }
+
+    .works-content-next {
+        img {
+            width: 240px;
+        }
+    }
+}
+
+
+@media screen and (max-width: 500px) {
+    .select-area {
+        margin-right: 8vw;
+    }
+
+
+    .select-area select {
+        font-size: 1.2rem;
+    }
+
+
+    .works-content {
+        img {
+            width: 300px;
+        }
+
+        a {
+            display: block;
+        }
+    }
+
+    .works-content-next {
+        img {
+            width: 195px;
+        }
+
+        a {
+            display: block;
+        }
+    }
+
+    .yamauchi-img-next {
+        align-items: flex-end;
+    }
+
+}
+
+.select-area {
+    margin-right: 18vw;
+}
+
+@media screen and (max-width: 1400px) {
+    .select-area {
+        margin-right: 13vw;
+    }
+}
+
+.select-setting {
+    display: flex;
+    justify-content: space-around;
+}
+
+@media screen and (max-width: 500px) {
+
+    .model-inner {
+        padding-top: 20px;
+    }
+}
+
+
+/* ホバーアクション */
+.w-title {
+    position: relative;
+    /* display: block; */
+    transition: 0.3s;
+}
+
+.w-title::after {
+    position: absolute;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: #effa4c;
+    bottom: -10px;
+    transform: scale(0, 1);
+    /* x要素に0のため、表示されない設定。ホバー時に1へ変換して表示 */
+    transform-origin: right top;
+    /*変形（アンダーラインの伸長）の原点がaタグ（各メニュー）の右端*/
+    transition: transform 0.3s;
+}
+
+.w-title:hover::after,
+.works-content:hover .w-title::after,
+.works-content-next:hover .w-title::after {
+    transform: scale(1, 1);
+    /*ホバー後、x軸方向に1（相対値）伸長*/
+    transform-origin: left top;
+    /*左から右に向かう*/
+}
+
+@media screen and (max-width: 500px) {
+
+    .w-title:hover::after,
+    .works-content:hover .w-title::after,
+    .works-content-next:hover .w-title::after {
+        display: none;
+    }
+}

@@ -1,0 +1,170 @@
+@charset "utf-8";
+
+h1 {
+    display: block;
+    font-size: 7.2rem;
+    margin-top: 80px;
+    margin-left: 18vw;
+}
+
+.sub-title {
+    display: inline-block;
+    margin-top: 3px;
+    margin-left: 20vw;
+    font-size: 2.2rem;
+    padding-bottom: 50px;
+}
+
+h2 {
+    font-size: 2.2rem;
+    font-weight: 500;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-decoration-color: #DFE1A3;
+    text-underline-offset: 18px;
+}
+
+@media screen and (max-width: 700px) {
+    h1 {
+        font-size: 5.6rem;
+        margin-left: 13vw;
+
+    }
+
+    .sub-title {
+        font-size: 2.2rem;
+        margin-left: 15vw;
+
+    }
+}
+
+@media screen and (max-width: 550px) {
+    h1 {
+        margin-left: 5vw;
+
+    }
+
+    .sub-title {
+        margin-left: 7vw;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .logo {
+        display: none;
+    }
+}
+
+.c-info,
+.c-history {
+    margin-bottom: 50px;
+}
+
+.company-toparea {
+    padding-top: 50px;
+    padding-bottom: 120px;
+}
+
+.little-top-position {
+    align-items: flex-start;
+}
+
+.company-img {
+    max-width: 100%;
+    padding-top: 100px;
+}
+
+.greeting-detail {
+    margin-top: 50px;
+}
+
+.greeting-detail p {
+    line-height: 1.5;
+    margin-bottom: 3rem;
+}
+
+.class-name {
+    font-size: 1.4rem;
+    padding: 0 15px 0;
+}
+
+.president-name {
+    font-size: 2.2rem;
+}
+
+.company-detail-wrap {
+
+    padding-left: 90px;
+
+    table {
+
+        th {
+            font-weight: 500;
+            padding: 0.8em 0;
+            padding-right: 1.6em;
+            white-space: nowrap;
+        }
+
+        td {
+            padding: 0.8em 0;
+            line-height: 1.8;
+        }
+    }
+}
+
+
+
+@media screen and (max-width: 800px) {
+
+    .responsive-rap {
+        flex-direction: column;
+        max-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .company-img {
+        padding-top: 50px;
+        padding-bottom: 20px;
+        padding-left: 0;
+    }
+
+    .model-inner {
+        &.type-center {
+            width: 445px;
+        }
+    }
+
+    .company-detail-wrap {
+        padding-left: 35px;
+    }
+
+    .company-detail-wrap th,
+    td {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 715px) {
+    .company-detail-wrap br {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 470px) {
+    .model-inner {
+        &.type-center {
+            width: unset;
+        }
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .greeting-detail {
+        text-align: justify;
+
+        br {
+            display: none;
+        }
+    }
+}
