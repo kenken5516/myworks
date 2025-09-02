@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/destyle.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/contact.js"></script>
+    <title>お問い合わせ｜MAKE 広告制作会社</title>
+</head>
+
+<body>
+    <header>
+        <nav class="gnav">
+            <div class="gnav-cont">
+                <ul>
+                    <li><a class="g-menu" href="service.html">SERVICE</a></li>
+                    <li><a class="g-menu" href="works.html">WORKS</a></li>
+                    <li><a class="g-menu" href="voice-of-clients.html">VOICE OF CLIENTS</a></li>
+                    <li><a class="g-menu" href="company.html">COMPANY</a></li>
+                    <li><a class="g-menu" href="contact.html">CONTACT US</a></li>
+                </ul>
+            </div>
+            <a href="index.html"><span class="res-logo"><img src="img/common/logo-white.png" alt="ロゴマーク"></span></a>
+
+        </nav>
+
+        <span class="hmbicon"><img src="img/common/hmb-icon.png" alt="メニュー">
+        </span>
+
+        <a href="index.html"><span class="logo small"><img src="img/common/logo-01.png" alt="ロゴマーク"></span>
+        </a>
+    </header>
+
+
+
+    <main>
+        <h1>Contact Us</h1>
+        <h2>お問い合わせ</h2>
+
+        <div class="model-inner contact-toparea">
+            <ul class="form-read">
+                <li>ご質問・ご相談は下記よりお願いいたします。
+                </li>
+                <li>求人情報の詳細問い合わせもお気軽にご連絡ください。
+                </li>
+                <li>※売り込みのメールには回答できない事もございますので、予めご了承ください。</li>
+            </ul>
+
+            <form class="contact-form model-form type-blue" action="check.php" method="post">
+                <dl>
+                    <div>
+                        <dt><label for="company">会社名</label></dt>
+                        <dd><input type="text" id="company" name="u-name"></dd>
+                    </div>
+
+                    <div>
+                        <dt><label for="name">お名前</label></dt>
+                        <dd><input type="text" id="name" name="u-name"></dd>
+                    </div>
+
+                    <div>
+                        <dt><label for="tel">電話番号</label></dt>
+                        <dd><input type="tel" id="tel" name="u-tel"></dd>
+                    </div>
+
+                    <div>
+                        <dt><label for="mail">メールアドレス</label></dt>
+                        <dd><input type="email" id="mail" name="u-mail"></dd>
+                    </div>
+
+                    <div>
+                        <dt><label for="residence">住所</label></dt>
+                        <dd><input type="text" id="residence" name="u-residence"></dd>
+                    </div>
+
+                    <div>
+                        <dt><label for="genre">お問い合わせの種類</label></dt>
+                        <dd>
+                            <select id="genre" name="u-genre">
+                                <option value="選択なし" selected>選択してください</option>
+                                <option value="資料請求">資料請求</option>
+                                <option value="仕事の依頼">仕事の依頼</option>
+                                <option value="その他ご質問">その他ご質問</option>
+                            </select>
+                        </dd>
+                    </div>
+
+                    <div>
+                        <dt><label for="comment">メッセージ</label></dt>
+                        <dd><textarea name="u-comment" id="comment"></textarea></dd>
+                    </div>
+                </dl>
+
+                <p class="personal-check">
+                    <input type="checkbox" id="personal" name="u-personal" value="同意する">
+                    <label for="personal">個人情報の取り扱いに同意する</label>
+                </p>
+                <input type="submit" value="確認画面へ" disabled>
+            </form>
+
+        </div>
+    </main>
+
+    <footer class="footer-nav">
+        <a href="index.html">
+            <img class="footer-logo" src="img/common/company-name-logo.png" alt="会社名のロゴ" width="180px">
+        </a>
+        <address>
+            <span class="residence">〒XXX-XXXX 東京都品川区東品川X-XX-XX</span>
+            <div class="contact-info">
+                <a class="tel btn-border" href="tel:0XX-XXXX-XXXX">TEL:0XX-XXXX-XXXX</a>
+                <a class="fax btn-border" href="fax:0XX-XXXX-XXXX">FAX:0XX-XXXX-XXXX</a>
+            </div>
+        </address>
+
+        <ul class="model-flex center">
+            <li><a href="#"><img src="img/common/Instagram_Glyph_White.png" alt="Instagram" height="29"></a></li>
+            <li><a href="#"><img src="img/common/Facebook_Logo_Secondary.png" alt="facebook" height="29"></a></li>
+        </ul>
+
+
+        <p class="Copyright">
+            <small>Copyright &copy; MAKE. All Rights Reserved.</small>
+        </p>
+    </footer>
+
+
+</body>
+
+</html>
